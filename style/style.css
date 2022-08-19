@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #e5e5e5;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 40px;
+    position: absolute;
+    width: 120px;
+    height: 48px;
+    left: 40px;
+    top: 40px;
+    margin-bottom: 200px;
+}
+
+.logo-container {
+    /* Logo */
+    width: 120px;
+    height: 48px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+main {
+    margin: 120px 30px 30px 70px;
+}
+
+.main-container {}
+
+.container-desencriptado {
+    width: 60%;
+}
+
+.container-desencriptado textarea {
+    box-sizing: border-box;
+    border-radius: 20px;
+    font-size: 20px;
+    padding: 20px;
+    width: 100%;
+}
+
+.container-encriptado {
+    position: absolute;
+    width: 400px;
+    height: 844px;
+    top: 40px;
+    right: 20px;
+    background: whitesmoke;
+    border-radius: 20px;
+}
+
+.img-muñeco {
+    position: absolute;
+    width: 336px;
+    height: 304px;
+    right: 30px;
+    top: 123px;
+}
