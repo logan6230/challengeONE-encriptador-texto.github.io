@@ -98,36 +98,44 @@ footer {
     }
 }*/
 
+
 /*-------cambio realizado------*/
+
 * {
     box-sizing: border-box;
 }
 
 body {
-    background: #E9ECF8;
+    background: #e9ecf8;
 }
 
 header {
-
     padding: 15px;
     width: 124px;
     height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
-
-
 }
-main{
-    overflow:auto;
-    
+
+main {
+    max-height: 1024px;
 }
-/*.menu {
-    float: left;
+
+.botones {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 15px 0;
+}
+
+button {
     width: 20%;
     text-align: center;
+    margin: 0 10px 0 0;
 }
 
+
+/*
 .menu a {
     background-color: #e5e5e5;
     padding: 8px;
@@ -137,18 +145,49 @@ main{
     color: black;
 }*/
 
-
-
 .main {
     box-sizing: border-box;
     float: left;
     width: 60%;
-    padding: 0 20px;
-    border: 1px solid black;
-    margin: 15px;
-    min-height: 76.5vh;
+    margin: 15px 0 15px 35px;
+    height: 600px;
 }
 
+.main p {
+    margin: 15px 0 35px 35px;
+}
+
+.encriptar {
+    background: rgb(77, 141, 236);
+    border-radius: 10px;
+    height: 40px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+}
+
+.desencriptar {
+    background: rgb(215, 77, 236);
+    border-radius: 10px;
+    height: 40px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+}
+
+.desencriptar:hover,
+.encriptar:hover {
+    cursor: pointer;
+    scale: 1.1;
+}
+
+.container-text {
+    background: #f8f4f400;
+    border: none;
+    width: 100%;
+    font-size: 20px;
+    max-height: 550px;
+}
 
 .right {
     box-sizing: border-box;
@@ -157,11 +196,10 @@ main{
     right: 30px;
     top: 25px;
     width: 30%;
-    min-height: 86.5%;
+    height: 700px;
     padding: 15px;
     text-align: center;
     border-radius: 30px;
-
 }
 
 footer {
@@ -176,7 +214,6 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 footer p {
@@ -190,9 +227,33 @@ footer p {
     font-weight: bold;
 }
 
-@media only screen and (max-width: 620px) {
+@media only screen and (min-width: 1281px) {
+    main {
+        min-height: 400px;
+    }
+    .right {
+        height: 550px;
+    }
+    .main {
+        min-height: 350px;
+        max-height: 350px;
+    }
+    .container-text {
+        min-height: 350px;
+        max-height: 350px;
+        max-width: 100%;
+        min-width: 100%;
+    }
+}
 
-    /* For mobile phones: */
+@media only screen and (max-width: 768px) {
+    body {
+        background: #fff;
+    }
+    main {
+        min-height: 1174px;
+        max-height: 1384px;
+    }
     .menu,
     .main,
     .right,
@@ -200,19 +261,60 @@ footer p {
     footer,
     main {
         width: 100%;
-        
     }
-    .right{
+    .right {
         position: relative;
         height: 40vh;
+        display: flex;
+        right: 0;
     }
-    .main{
+    .main {
+        margin: 0;
         float: none;
     }
-    footer p{
+    .container-text {
+        max-height: 400px;
+    }
+    footer p {
         font-size: 0.8rem;
     }
-    footer{
+    footer {
+        position: relative;
+        height: 60px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    /* For mobile phones: */
+    body {
+        background: rgb(232, 13, 13);
+    }
+    main {
+        min-height: 933px;
+        max-height: 1715px;
+    }
+    .menu,
+    .main,
+    .right,
+    header,
+    footer,
+    main {
+        width: 100%;
+    }
+    .right {
+        position: relative;
+        height: 40vh;
+        display: flex;
+        right: 0;
+    }
+    .main {
+        margin: 0;
+        float: none;
+    }
+    footer p {
+        font-size: 0.8rem;
+    }
+    footer {
         position: relative;
         height: 60px;
     }
