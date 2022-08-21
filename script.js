@@ -2,12 +2,6 @@ console.log("pase por aqui");
 var listaVocales = ["e", "o", "i", "a", "u"];
 var listaCriptos = ["enter", "ober", "imes", "ai", "ufat"];
 var validador = document.getElementById('box-msj')
-    /*textArea();
-
-    function textArea() {
-        document.getElementById("right").innerHTML = '<div class="img-muñeco"><img src="img/Muñeco.png" alt="muñeco con lupa"></div><div id="foto"></div><div><h1>Ningun mensaje fue encontrado</h1></div><form action=""><textarea name="" id="" cols="30" rows="10"placeholder="Ingrese el texto que dese encriptar o desencriptar"></textarea></form><div d="desencriptado"></div>'
-
-    }*/
 
 function encriptar() {
     if (document.getElementById('box-msj').value == "" || document.getElementById('box-msj').value.length < 2) {
