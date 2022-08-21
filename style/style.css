@@ -1,106 +1,3 @@
-/* * {
-    box-sizing: border-box;
-}
-
-body {
-    background: #E9ECF8;
-}
-
-
-.logo-container {
-    left: 40px;
-    top: 40px;
-    width: 124px;
-    height: 48px;
-    
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    padding: 15px;
-}
-
-main {
-    margin: 120px 30px 30px 70px;
-}
-
-.main-container {
-    float: left;
-    width: 60%;
-    padding: 0 20px;
-}
-
-.container-desencriptado {
-    width: 60%;
-}
-
-.container-desencriptado textarea {
-    box-sizing: border-box;
-    border-radius: 20px;
-    font-size: 20px;
-    padding: 20px;
-    width: 100%;
-}
-
-.container-encriptado {
-    position: absolute;
-    width: 400px;
-    height: 844px;
-    top: 40px;
-    right: 20px;
-    background: whitesmoke;
-    border-radius: 20px;
-}
-
-.img-muñeco {
-    
-    width: 336px;
-    height: 304px;
-    right: 30px;
-    top: 123px;
-}
-
-footer {
-    min-width: 94%;
-    bottom: 10px;
-    position: fixed;
-    background-color: #e5e5e5;
-    text-align: center;
-    padding: 30px;
-    margin: 10px 3% 10px 3%;
-    box-sizing: border-box;
-    font-weight: bold;
-    font-size: 1em;
-}
-
-.caja-muñeco{
-    right: 70px;
-    top: 10px;
-    position: absolute;
-    border-radius: 8px;
-}
-.right {
-    background-color: #FFF;
-    float: left;
-    width: 20%;
-    padding: 15px;
-    margin-top: 7px;
-    text-align: center;
-    min-height: 85%;
-}
-
-@media only screen and (max-width: 620px) {
-
-    For mobile phones: 
-    .menu,
-    .main,
-    .right {
-        width: 100%;
-    }
-}*/
-
-
-/*-------cambio realizado------*/
-
 * {
     box-sizing: border-box;
 }
@@ -131,7 +28,6 @@ main {
 button {
     width: 20%;
     text-align: center;
-    margin: 0 10px 0 0;
 }
 
 
@@ -150,11 +46,13 @@ button {
     float: left;
     width: 60%;
     margin: 15px 0 15px 35px;
-    height: 600px;
+    min-height: 600px;
 }
 
 .main p {
     margin: 15px 0 35px 35px;
+    font-weight: bold;
+    font-size: 14px;
 }
 
 .encriptar {
@@ -164,15 +62,19 @@ button {
     font-size: 1.2em;
     font-weight: bold;
     color: #fff;
+    width: 30%;
+    margin-right: 15px;
 }
 
 .desencriptar {
     background: rgb(215, 77, 236);
     border-radius: 10px;
     height: 40px;
+    width: 30%;
     font-size: 1.2em;
     font-weight: bold;
     color: #fff;
+    margin-left: 15px;
 }
 
 .desencriptar:hover,
@@ -182,11 +84,12 @@ button {
 }
 
 .container-text {
-    background: #f8f4f400;
+    background: #b01e1e00;
     border: none;
     width: 100%;
     font-size: 20px;
     max-height: 550px;
+    padding: 20px;
 }
 
 .right {
@@ -196,10 +99,41 @@ button {
     right: 30px;
     top: 25px;
     width: 30%;
-    height: 700px;
     padding: 15px;
     text-align: center;
     border-radius: 30px;
+}
+
+.mostrar-msj textarea {
+    width: 100%;
+    min-height: 600px;
+    max-height: 600px;
+    min-width: 100%;
+    max-width: 100%;
+    padding: 10px 10px 10px 10px;
+    font-size: 1.5em;
+    border: none;
+}
+
+.right .mostrar-msj {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 750px;
+    max-height: 750px;
+    justify-content: center;
+    align-items: center;
+}
+
+.mensaje-1 {
+    font-size: 25px;
+    font-weight: bold;
+    padding: 15px;
+}
+
+.mensaje-2 {
+    font-size: 19px;
+    padding: 25px;
 }
 
 footer {
@@ -227,12 +161,25 @@ footer p {
     font-weight: bold;
 }
 
+.btn-copiar {
+    margin-top: 20px;
+    background: #8df75f;
+    height: 50px;
+    width: 70%;
+    border-radius: 15px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#msjCopiar {
+    border-radius: 15px;
+    padding: 15px;
+    border: none;
+}
+
 @media only screen and (min-width: 1281px) {
     main {
         min-height: 400px;
-    }
-    .right {
-        height: 550px;
     }
     .main {
         min-height: 350px;
@@ -244,14 +191,14 @@ footer p {
         max-width: 100%;
         min-width: 100%;
     }
+    .right div {
+        min-height: 520px;
+        max-height: 520px;
+    }
 }
 
 @media only screen and (max-width: 768px) {
     body {
-        background: #fff;
-    }
-    main {
-        min-height: 1174px;
         max-height: 1384px;
     }
     .menu,
@@ -262,36 +209,52 @@ footer p {
     main {
         width: 100%;
     }
+    .right div img {
+        display: none;
+    }
+    header {
+        border: 1px solid;
+        border-radius: 15px;
+        margin-top: 10px;
+    }
     .right {
         position: relative;
-        height: 40vh;
         display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
         right: 0;
     }
     .main {
         margin: 0;
         float: none;
     }
+    .right .mostrar-msj,
+    .mostrar-msj textarea,
     .container-text {
+        min-height: 100px;
         max-height: 400px;
+    }
+    .botones button {
+        width: 40%;
+        margin: 10px;
+        height: 60px;
     }
     footer p {
         font-size: 0.8rem;
+        margin-top: 30px;
     }
     footer {
+        height: 80px;
         position: relative;
-        height: 60px;
     }
 }
 
 @media only screen and (max-width: 375px) {
     /* For mobile phones: */
     body {
-        background: rgb(232, 13, 13);
-    }
-    main {
-        min-height: 933px;
+        min-height: 667px;
         max-height: 1715px;
+        flex-direction: column;
     }
     .menu,
     .main,
@@ -302,20 +265,43 @@ footer p {
         width: 100%;
     }
     .right {
-        position: relative;
-        height: 40vh;
-        display: flex;
         right: 0;
+        margin: 15px 0 0 0;
+    }
+    .right .mostrar-msj,
+    .mostrar-msj textarea,
+    .container-text {
+        min-height: 100px;
+        max-height: 300px;
     }
     .main {
+        min-height: 300px;
         margin: 0;
         float: none;
+    }
+    .container-text {
+        font-size: 15px;
+        padding: 10px;
+        font-size: 20px;
+        border-radius: 20px;
+    }
+    .right div img {
+        display: none;
+    }
+    .botones {
+        flex-direction: column;
+        align-items: center;
+        font-size: 10px;
+    }
+    .botones button {
+        width: 80%;
+        margin: 10px;
     }
     footer p {
         font-size: 0.8rem;
     }
     footer {
-        position: relative;
         height: 60px;
+        position: relative;
     }
 }

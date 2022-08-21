@@ -7,43 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/reset.css">
     <link rel="stylesheet" href="style/style.css">
-    <title>Encriptador - 1 Desktop</title>
+    <title>Encriptador Alura</title>
 </head>
 
 <body>
-    <!--class="container-desencriptado"
-    <header>
-        <div class="logo-container">
-            <img src="img/Vector.png" alt="logo-alura">
-        </div>
-    </header>
-    <main>
-       
-        <section class="main-container">
-            <div>
-                <form >
-                    <textarea id="taMensaje"  style="min-width: 100%; max-width: 100%; min-height: 500px; max-height: 500px; border-radius: 20px; padding: 12px;" rows="20" placeholder="Ingrese texto aqui"></textarea>                 
-                </form>
-                <div>
-                    <label>☢ Solo letras minusculas y sin acentos</label>
-                </div>
-                <div>
-                    <button onclick="encriptar()">Encriptar</button>
-                    <button onclick="desencriptar()">Desencriptar</button>
-                </div>
-            </div>
-        </section>
-        class="container-encriptado"
-        <section  id="right" class="right caja-muñeco" style="border: 1px solid #000;">
-           
-        </section>
-        
-    </main>
-    <footer>
-        <p>© copyright Segundo Pantoja 2022</p>
-    </footer>
--->
-
     <header>
         <div class="logo-container">
             <img src="img/Vector.png" alt="logo-alura">
@@ -51,30 +18,29 @@
     </header>
 
     <main>
-        <!--div class="menu">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
-            <a href="#">Link 4</a>
-        </div-->
-
         <div class="main">
-            <textarea rows="37" class="container-text" placeholder="Escriba su texto aqui..."></textarea>
+            <div id="containerBoxMsj">
+                <textarea id="box-msj" rows="37" class="container-text" placeholder="Escriba su texto aqui..."></textarea>
+            </div>
+
             <div>
                 <p>☢️​ Solo letras minusculas y sin acentos</p>
             </div>
 
             <div class="botones">
-                <button class="encriptar">Encriptar</button>
-                <button class="desencriptar">Desencriptar</button>
+                <button class="encriptar" onclick="encriptar()">Encriptar</button>
+                <button class="desencriptar" onclick="desencriptar()">Desencriptar</button>
             </div>
 
         </div>
 
         <div class="right">
-            <h2>About</h2>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-        </div>
+            <div class="mostrar-msj" id="show-msj">
+                <img src="img/Muñeco.png" alt="muñeco-con-lupa">
+                <p class="mensaje-1">Ningun mensaje fue encontrado</p>
+                <p class="mensaje-2">Ingrese el texto que dese encriptar o desencriptar</p>
+            </div>
+
     </main>
 
     <footer>
