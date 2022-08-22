@@ -13,7 +13,6 @@ function encriptar() {
         var validacion = validarMayusculas(texto2)
         var contador = 0
         if (validacion) {
-
             for (let i = 0; i < listaVocales.length; i++) {
                 if (contador <= 0) {
                     console.log('En el if : ' + listaVocales[i])
@@ -77,7 +76,7 @@ function desencriptar() {
 
 
 function validarMayusculas(texto) {
-    var expresion = new RegExp("^[^-][a-z-!\\s]+$");
+    var expresion = new RegExp("[^-]^[a-z-!\\s]+$");
 
     if (expresion.test(texto)) {
         return true;
