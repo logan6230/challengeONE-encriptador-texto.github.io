@@ -76,15 +76,19 @@ function desencriptar() {
 
 
 function validarMayusculas(texto) {
-    var expresion = new RegExp("[^-]^[a-z-!\\s]+$");
-
-    if (expresion.test(texto)) {
-        return true;
-    } else {
-        return false;
+    var expresion = new RegExp("^[a-z-!\\s]+$");
+    var validarSimbolo = new RegExp("^[^\\-]+$")
+    if (validarSimbolo.test(texto)) {
+        if (expresion.test(texto)) {
+            return true;
+        } else {
+            return false;
+        }
     }
-
+    return false
 }
+
+
 
 function copiarTexto() {
     document.getElementById("msjCopiar").select()
